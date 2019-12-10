@@ -83,18 +83,19 @@
         font-style: italic;
     }
 
-    .boxes.gallery-container p {
+    .box-work {
+        padding: 10px;
+    }
+    
+    .box-work > div p {
         font-style: italic;
     }
-    .boxes.gallery-container p::first-letter {
+
+    .box-work > div p::first-letter {
         font-weight: bold;
     }
 
-    .boxes.gallery-container li {
-        padding: 10px;
-    }
-
-    .boxes.gallery-container li:nth-child(odd) {
+    .box-work:nth-child(odd) {
         background-color: lightskyblue;
         color: #fff;
     }
