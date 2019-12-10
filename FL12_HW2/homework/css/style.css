@@ -24,7 +24,7 @@
             left: 200px;
         }
         100% {
-            left: 0px;
+            left: 0;
         }
     }
 
@@ -51,6 +51,12 @@
     .tm-box-bg-title:hover {
         background-color: lightgrey;
         color: lightskyblue;
+        font-style: italic;
+    }
+
+    .tm-team-description-container p:last-child {
+        word-spacing: 10px;
+        letter-spacing: 5px;
         font-style: italic;
     }
 }
