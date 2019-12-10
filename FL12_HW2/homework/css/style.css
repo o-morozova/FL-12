@@ -1,5 +1,10 @@
 @media screen {
 
+    .tm-nav-item-link:hover {
+        background-color: lightskyblue;
+        color: #fff;
+    }
+
 }
 
 @media print {
