@@ -1,15 +1,15 @@
 @media screen {
 
+    #home {
+        background: linear-gradient(to right, lightskyblue, burlywood);
+    }
+
     .tm-nav-item-link:hover {
         background-color: lightskyblue;
         color: #fff;
     }
 
-    #home {
-        background: linear-gradient(to right, lightskyblue, burlywood);
-    }
-
-    .tm-banner-inner {
+   .tm-banner-inner {
         background-color: #fff;
     }
 
@@ -27,6 +27,27 @@
             left: 0px;
         }
     }
+
+    .flex-2-col {
+        display: flex;
+    }
+
+    .flex-2-col [class^="tm-section"] {
+        text-align: left;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        text-indent: 25px;
+    }
+
+    .flex-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
 }
 
 @media print {
