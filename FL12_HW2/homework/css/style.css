@@ -101,6 +101,37 @@
         line-height: 30px;
     }
 
+    h2.tm-section-title {
+        text-align: left;
+    }
+
+    input.form-control {
+        border-style: none;
+        border-bottom: 1px solid lightskyblue;
+    }
+
+    input:focus {
+        background-color: lightskyblue;
+    }
+
+    #contact_message {
+        border-color: lightskyblue;
+        background-image: url(../img/email-icon.png);
+        background-position: right 10px bottom 10px;
+        background-repeat: no-repeat;
+        background-size: 28px;
+        box-shadow: none;
+    }
+
+    .submit-btn {
+        float: right;
+        border: 1px solid lightskyblue;
+        background-color: #fff;
+        color: lightskyblue;
+        height: 57px;
+        width: 108px;
+    }
+
 
 }
 
