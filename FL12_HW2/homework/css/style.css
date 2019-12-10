@@ -65,6 +65,7 @@
     }
 
     a.text::after {
+        display: inline-block;
         content: "New";
         color: red;
         font-weight: bold;
@@ -148,6 +149,17 @@
 
 @media print {
 
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    a {
+        color: lightskyblue;
+    }
+
     ul.boxes.gallery-container,
     #about.tm-content-box,
     #contact.padding-medium,
@@ -158,4 +170,52 @@
         display: none;
     }
 
+    .tm-main-content {
+        padding-top: 0;
     }
+
+    .tm-content-box {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .tm-team-description-container, .tm-banner-inner, .carousel-content {
+        margin: 0 auto;
+        max-width: 700px;
+    }
+
+    .blocks .tm-team-description-container p:last-child {
+        word-spacing: 10px;
+        letter-spacing: 5px;
+        font-style: italic;
+    }
+
+    h2.tm-section-title, h2{
+        text-transform: uppercase;
+        color: rgb(75, 157, 213);
+        font-weight: 300;
+    }
+
+    .heading {
+        max-width: 400px;
+    }
+
+    .heading li {
+        list-style-type: none;
+        text-align: left;
+    }
+
+    .heading li:nth-child(2n+1) {
+        text-align: right;
+    }
+
+    .heading ol {
+        padding: 0;
+    }
+
+    .padding-medium, .carousel-content {
+        margin: 0 auto;
+        padding: 5px 40px;
+    }
+
+}
