@@ -1,5 +1,17 @@
-/*
+@media screen {
 
-write your code here
+}
 
-*/
+@media print {
+
+    ul.boxes.gallery-container,
+    #about.tm-content-box,
+    #contact.padding-medium,
+    .tm-sidebar,
+    .carousel-indicators,
+    .img-fluid,
+    .tm-team-img {
+        display: none;
+    }
+
+    }
