@@ -54,11 +54,37 @@
         font-style: italic;
     }
 
-    .tm-team-description-container p:last-child {
+    .padding-medium h2{
+        color: lightskyblue;
+        text-align: center;
+    }
+
+    .padding-medium ol {
+        list-style-type: lower-alpha;
+    }
+
+    .padding-medium li:hover::before {
+        content: ">";
+        font-weight: bold;
+    }
+
+    a.text::after {
+        content: "New";
+        color: red;
+        font-weight: bold;
+        font-variant: small-caps;
+        vertical-align: super;
+        font-size: x-small;
+}
+
+    .blocks .tm-team-description-container p:last-child {
         word-spacing: 10px;
         letter-spacing: 5px;
         font-style: italic;
     }
+
+
+
 }
 
 @media print {
