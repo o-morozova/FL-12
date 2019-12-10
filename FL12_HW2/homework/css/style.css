@@ -170,6 +170,12 @@
         display: none;
     }
 
+    h2.tm-section-title, h2{
+        text-transform: uppercase;
+        color: rgb(75, 157, 213);
+        font-weight: 300;
+    }
+
     .tm-main-content {
         padding-top: 0;
     }
@@ -188,12 +194,6 @@
         word-spacing: 10px;
         letter-spacing: 5px;
         font-style: italic;
-    }
-
-    h2.tm-section-title, h2{
-        text-transform: uppercase;
-        color: rgb(75, 157, 213);
-        font-weight: 300;
     }
 
     .heading {
