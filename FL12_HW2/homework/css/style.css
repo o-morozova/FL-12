@@ -5,6 +5,28 @@
         color: #fff;
     }
 
+    #home {
+        background: linear-gradient(to right, lightskyblue, burlywood);
+    }
+
+    .tm-banner-inner {
+        background-color: #fff;
+    }
+
+    .tm-banner-text {
+        text-shadow: 5px 5px 3px #333;
+        position: relative;
+        animation: banner 4s cubic-bezier(0.25,0.1,0.25,1);
+    }
+
+    @keyframes banner {
+        0% {
+            left: 200px;
+        }
+        100% {
+            left: 0px;
+        }
+    }
 }
 
 @media print {
