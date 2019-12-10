@@ -101,7 +101,7 @@
         line-height: 30px;
     }
 
-    h2.tm-section-title {
+    #contact > h2.tm-section-title {
         text-align: left;
     }
 
@@ -144,8 +144,6 @@
         border-top: 20px solid lightskyblue;
         border-left: 20px solid lightskyblue;
     }
-
-
 }
 
 @media print {
