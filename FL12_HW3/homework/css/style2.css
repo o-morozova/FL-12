@@ -12,8 +12,8 @@ header {
   background-repeat: no-repeat;
   overflow: hidden;
   background-position: center center;
-  background-size: 100%;
-  border-bottom-right-radius: 150px 100px; }
+  background-size: cover;
+  border-bottom-right-radius: 40% 40%; }
   header img {
     float: left;
     margin-right: 20px; }
@@ -30,9 +30,25 @@ header {
   header .header_heading {
     color: #ffffff;
     font-size: 69px;
-    font-weight: bold; }
+    font-weight: bold;
+    width: 500px;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 0;
+    line-height: 70px; }
+    header .header_heading::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 3px;
+      width: 290px;
+      height: 46px;
+      background-color: #ff4e33;
+      z-index: -1; }
   header .header_text {
-    white-space: pre-line; }
+    white-space: pre-line;
+    line-height: 28px;
+    margin-bottom: 68px; }
 
 button {
   color: #ffffff;
@@ -49,7 +65,7 @@ button {
   color: #ffffff;
   font-family: 'Hind', sans-serif;
   font-size: 20px;
-  margin: 40px; }
+  margin: 40px 153px; }
 
 .section_card_heading {
   color: #ffffff;

@@ -18,8 +18,9 @@ header {
   background-repeat: no-repeat;
   overflow: hidden;
   background-position: center center;
-  background-size: 100%;
-  border-bottom-right-radius: 150px 100px;
+  background-size: cover;
+  border-bottom-right-radius: 40% 40%;
+  
   img {
     float: left;
     margin-right: 20px;
@@ -41,9 +42,27 @@ header {
     color: $headerColor;
     font-size: 69px;
     font-weight: bold;
+    width: 500px;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 0;
+    line-height: 70px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 3px;
+      width: 290px;
+      height: 46px;
+      background-color: $highlightedWordsColor;
+      z-index: -1;
+    }
   }
   .header_text {
     white-space: pre-line;
+    line-height: 28px;
+    margin-bottom: 68px;
   }
 }
 
@@ -61,7 +80,7 @@ button {
 .login {
   @include textWhite;
   font-size: 20px;
-  margin: 40px;
+  margin: 40px 153px;
 }
 
 .section_card_heading {
