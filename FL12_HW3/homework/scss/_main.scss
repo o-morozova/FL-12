@@ -20,7 +20,7 @@ header {
   background-position: center center;
   background-size: cover;
   border-bottom-right-radius: 40% 40%;
-  
+
   img {
     float: left;
     margin-right: 20px;
@@ -66,6 +66,10 @@ header {
   }
 }
 
+main {
+  margin: 0 403px;
+}
+
 button {
   @include textWhite;
   background: $btnColor;
@@ -83,14 +87,37 @@ button {
   margin: 40px 153px;
 }
 
+.section_text{
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'Hind', sans-serif;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  margin: 30px 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 563px;
+    top: -2px;
+    width: 185px;
+    height: 49px;
+    background-color: $highlightedWordsColor;
+    z-index: -1;
+  }
+}
+
 .section_card_heading {
   color: #ffffff;
-  font-size: 26px;
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Hind', sans-serif;
+  font-weight: bold;
 }
 
 .section_card {
   background-color: $sectionbgcolor;
-  height: 327px;
   width: 1116px;
   margin: 26px 0;
   border-radius: 8px;
@@ -98,12 +125,24 @@ button {
   display: flex;
   img {
     float: left;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-radius: 8px;
     margin: 22px;
+    width: 80%;
+    filter: contrast(1.2);
   }
   .section_card_text {
-    margin: auto;
+    margin: 5% auto;
+    color: $textSectionColor;
+    line-height: 25px;
+    text-align: justify;
+  }
+  .section_card_right_container {
+    width: 80%;
+    margin: 0 90px;
+    text-align: center;
+  }
+  a {
+    color: $textSectionColor;
   }
 }
 
