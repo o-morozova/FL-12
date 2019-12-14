@@ -1,0 +1,72 @@
+body {
+  background-color: #21232e;
+  color: #ffffff;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0; }
+
+header {
+  min-width: 1920px;
+  min-height: 720px;
+  background-image: url(../img/m-h-night.jpg);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-position: center center;
+  background-size: 100%;
+  border-bottom-right-radius: 150px 100px; }
+  header img {
+    float: left;
+    margin-right: 20px; }
+  header span {
+    display: block;
+    font-size: x-small;
+    font-weight: normal; }
+  header .landing-logo p {
+    font-weight: bold;
+    font-size: 19px; }
+  header .header-wrap {
+    margin: 21px 192px;
+    height: 600px; }
+  header .header_heading {
+    color: #ffffff;
+    font-size: 69px;
+    font-weight: bold; }
+  header .header_text {
+    white-space: pre-line; }
+
+button {
+  color: #ffffff;
+  font-family: 'Hind', sans-serif;
+  background: #e3ac00;
+  width: 142px;
+  height: 49px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 17px; }
+
+.login {
+  color: #ffffff;
+  font-family: 'Hind', sans-serif;
+  font-size: 20px;
+  margin: 40px; }
+
+.section_card_heading {
+  color: #ffffff;
+  font-size: 26px; }
+
+.section_card {
+  background-color: #3b3f50;
+  height: 327px;
+  width: 1116px;
+  margin: 26px 0;
+  border-radius: 8px;
+  align-items: center;
+  display: flex; }
+  .section_card img {
+    float: left;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin: 22px; }
+  .section_card .section_card_text {
+    margin: auto; }

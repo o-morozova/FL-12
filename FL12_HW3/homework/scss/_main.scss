@@ -1,0 +1,92 @@
+@mixin textWhite {
+  color: #ffffff;
+  font-family: 'Hind', sans-serif;
+}
+
+body {
+  background-color: $bgcolor;
+  color: $textcolor;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  min-width: 1920px;
+  min-height: 720px;
+  background-image: $headerimage;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-position: center center;
+  background-size: 100%;
+  border-bottom-right-radius: 150px 100px;
+  img {
+    float: left;
+    margin-right: 20px;
+  }
+  span {
+    display:block;
+    font-size: x-small;
+    font-weight: normal;
+  }
+  .landing-logo p {
+    font-weight: bold;
+    font-size: 19px;
+  }
+  .header-wrap {
+    margin: 21px 192px;
+    height: 600px;
+  }
+  .header_heading {
+    color: $headerColor;
+    font-size: 69px;
+    font-weight: bold;
+  }
+  .header_text {
+    white-space: pre-line;
+  }
+}
+
+button {
+  @include textWhite;
+  background: $btnColor;
+  width: 142px;
+  height: 49px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.login {
+  @include textWhite;
+  font-size: 20px;
+  margin: 40px;
+}
+
+.section_card_heading {
+  color: #ffffff;
+  font-size: 26px;
+}
+
+.section_card {
+  background-color: $sectionbgcolor;
+  height: 327px;
+  width: 1116px;
+  margin: 26px 0;
+  border-radius: 8px;
+  align-items: center;
+  display: flex;
+  img {
+    float: left;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin: 22px;
+  }
+  .section_card_text {
+    margin: auto;
+  }
+}
+
+
+
