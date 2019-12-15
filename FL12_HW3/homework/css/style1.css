@@ -1,7 +1,13 @@
+header .header_heading::after, .section_text::after, .section_banner_heading::after {
+  content: "";
+  position: absolute;
+  background-color: #14a0c7;
+  z-index: -1; }
+
 body {
   background-color: #ffffff;
   color: #2c2f3c;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   margin: 0;
   padding: 0; }
 
@@ -27,6 +33,16 @@ header {
   header .header-wrap {
     margin: 21px 192px;
     height: 600px; }
+    header .header-wrap button {
+      background: #699900;
+      color: #ffffff;
+      font-family: "Hind", sans-serif;
+      width: 142px;
+      height: 49px;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 17px; }
   header .header_heading {
     color: #2c2f3c;
     font-size: 69px;
@@ -37,14 +53,10 @@ header {
     margin-bottom: 0;
     line-height: 70px; }
     header .header_heading::after {
-      content: "";
-      position: absolute;
       left: 0;
       bottom: 3px;
       width: 290px;
-      height: 46px;
-      background-color: #14a0c7;
-      z-index: -1; }
+      height: 46px; }
   header .header_text {
     white-space: pre-line;
     line-height: 28px;
@@ -53,20 +65,9 @@ header {
 main {
   margin: 0 403px; }
 
-button {
-  color: #ffffff;
-  font-family: 'Hind', sans-serif;
-  background: #699900;
-  width: 142px;
-  height: 49px;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 17px; }
-
 .login {
   color: #ffffff;
-  font-family: 'Hind', sans-serif;
+  font-family: "Hind", sans-serif;
   font-size: 20px;
   margin: 40px 153px; }
 
@@ -79,14 +80,10 @@ button {
   position: relative;
   margin: 30px 0; }
   .section_text::after {
-    content: "";
-    position: absolute;
     left: 563px;
     top: -2px;
     width: 185px;
-    height: 49px;
-    background-color: #14a0c7;
-    z-index: -1; }
+    height: 49px; }
 
 .section_card_heading {
   color: #ffffff;
@@ -118,7 +115,8 @@ button {
     margin: 0 9%;
     text-align: center; }
   .section_card a {
-    color: #b6c3c4; }
+    color: #b6c3c4;
+    font-family: "Hind", sans-serif; }
 
 .section_banner {
   background: linear-gradient(to right, #649412, #2c5adc);
@@ -138,19 +136,24 @@ button {
   font-weight: bold;
   line-height: 10px; }
   .section_banner_heading::after {
-    content: "";
-    position: absolute;
     left: 283px;
     top: 13px;
     width: 62px;
-    height: 54px;
-    background-color: #14a0c7;
-    z-index: -1; }
+    height: 54px; }
 
 .section_banner_text {
   color: #b6c3c4; }
 
 .section_banner_button {
+  background: #699900;
+  color: #ffffff;
+  font-family: "Hind", sans-serif;
+  width: 142px;
+  height: 49px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 17px;
   float: right;
   margin: 48px 160px; }
 
