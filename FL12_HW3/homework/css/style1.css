@@ -36,15 +36,16 @@ header {
     header .header-wrap button {
       background: #699900;
       color: #ffffff;
-      font-family: "Hind", sans-serif;
+      font-family: "Source Sans Pro", sans-serif;
       width: 142px;
       height: 49px;
       border: none;
       border-radius: 4px;
-      font-weight: bold;
-      font-size: 17px; }
+      font-weight: 600;
+      font-size: 18px; }
   header .header_heading {
     color: #2c2f3c;
+    font-family: "Source Sans Pro", sans-serif;
     font-size: 69px;
     font-weight: bold;
     width: 500px;
@@ -74,7 +75,7 @@ main {
 .section_text {
   font-size: 40px;
   font-weight: bold;
-  font-family: 'Hind', sans-serif;
+  font-family: "Hind", sans-serif;
   text-align: center;
   z-index: 2;
   position: relative;
@@ -89,7 +90,7 @@ main {
   color: #ffffff;
   font-size: 24px;
   text-align: center;
-  font-family: 'Hind', sans-serif;
+  font-family: "Hind", sans-serif;
   font-weight: bold; }
 
 .section_card {
@@ -132,6 +133,7 @@ main {
   display: inline-block; }
 
 .section_banner_heading {
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 30px;
   font-weight: bold;
   line-height: 10px; }
@@ -147,13 +149,13 @@ main {
 .section_banner_button {
   background: #699900;
   color: #ffffff;
-  font-family: "Hind", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   width: 142px;
   height: 49px;
   border: none;
   border-radius: 4px;
-  font-weight: bold;
-  font-size: 17px;
+  font-weight: 600;
+  font-size: 18px;
   float: right;
   margin: 48px 160px; }
 
@@ -162,7 +164,7 @@ footer {
   min-height: 243px;
   background-color: #21232e;
   color: #b6c3c4;
-  font-family: 'Hind', sans-serif;
+  font-family: "Hind", sans-serif;
   display: flex;
   align-items: flex-end;
   z-index: 1;

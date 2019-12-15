@@ -11,8 +11,8 @@
   height: 49px;
   border: none;
   border-radius: 4px;
-  font-weight: bold;
-  font-size: 17px;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 %highlightedWords {
@@ -68,6 +68,7 @@ header {
 
  .header_heading {
     color: $headerColor;
+    font-family: $fontHeader;
     font-size: 69px;
     font-weight: bold;
     width: 500px;
@@ -104,7 +105,7 @@ main {
 .section_text {
   font-size: 40px;
   font-weight: bold;
-  font-family: 'Hind', sans-serif;
+  font-family: $fontSection;
   text-align: center;
   z-index: 2;
   position: relative;
@@ -123,7 +124,7 @@ main {
   color: $linkColor;
   font-size: 24px;
   text-align: center;
-  font-family: 'Hind', sans-serif;
+  font-family: $fontSection;
   font-weight: bold;
 }
 
@@ -160,7 +161,7 @@ main {
 }
 
 .section_banner {
-  background: linear-gradient(to right, #649412, #2c5adc);
+  background: $bannerBgColor;
   border-radius: 8px;
   width: 1198px;
   height: 143px;
@@ -173,6 +174,7 @@ main {
   display: inline-block;
 }
 .section_banner_heading {
+  font-family: $fontHeader;
   font-size: 30px;
   font-weight: bold;
   line-height: 10px;
@@ -200,7 +202,7 @@ footer {
   min-height: 243px;
   background-color: map-get($colors, "primary");
   color: #b6c3c4;
-  font-family: 'Hind', sans-serif;
+  font-family: $fontFooter;
   display: flex;
   align-items: flex-end;
   z-index: 1;
