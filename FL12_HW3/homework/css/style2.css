@@ -17,7 +17,7 @@ header {
   header img {
     float: left;
     margin-right: 20px; }
-  header span {
+  header .landing-logo span {
     display: block;
     font-size: x-small;
     font-weight: normal; }
@@ -115,7 +115,84 @@ button {
     text-align: justify; }
   .section_card .section_card_right_container {
     width: 80%;
-    margin: 0 90px;
+    margin: 0 9%;
     text-align: center; }
   .section_card a {
     color: #c3c1c5; }
+
+.section_banner {
+  background: linear-gradient(to right, #649412, #2c5adc);
+  border-radius: 8px;
+  width: 1198px;
+  height: 143px;
+  margin: 141px -39px -71px;
+  position: relative;
+  z-index: 2; }
+
+.section_banner_text_wrap {
+  margin: 10px 162px;
+  display: inline-block; }
+
+.section_banner_heading {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 10px; }
+  .section_banner_heading::after {
+    content: "";
+    position: absolute;
+    left: 283px;
+    top: 13px;
+    width: 62px;
+    height: 54px;
+    background-color: #ff4e33;
+    z-index: -1; }
+
+.section_banner_text {
+  color: #c3c1c5; }
+
+.section_banner_button {
+  float: right;
+  margin: 48px 160px; }
+
+footer {
+  min-width: 1920px;
+  min-height: 243px;
+  background-color: #3b3f50;
+  color: #b6c3c4;
+  font-family: 'Hind', sans-serif;
+  display: flex;
+  align-items: flex-end;
+  z-index: 1;
+  position: absolute; }
+
+.footer-wrap {
+  max-width: 1535px;
+  margin: 0 auto;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  height: 166px;
+  align-items: center; }
+
+.footer_logo {
+  display: flex;
+  vertical-align: baseline; }
+  .footer_logo img {
+    margin-top: 20px;
+    padding-right: 15px;
+    align-self: flex-start; }
+  .footer_logo p {
+    font-size: 23px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center; }
+    .footer_logo p span {
+      display: block;
+      font-size: 10px;
+      font-weight: bold;
+      line-height: 10px; }
+
+.footer_text {
+  width: 307px;
+  font-size: 14px;
+  line-height: 21px; }

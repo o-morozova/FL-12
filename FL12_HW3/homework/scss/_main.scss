@@ -4,8 +4,8 @@
 }
 
 body {
-  background-color: $bgcolor;
-  color: $textcolor;
+  background-color: $bgColor;
+  color: $textColor;
   font-family: 'Source Sans Pro', sans-serif;
   margin: 0;
   padding: 0;
@@ -14,31 +14,33 @@ body {
 header {
   min-width: 1920px;
   min-height: 720px;
-  background-image: $headerimage;
+  background-image: $headerImage;
   background-repeat: no-repeat;
   overflow: hidden;
   background-position: center center;
   background-size: cover;
   border-bottom-right-radius: 40% 40%;
 
-  img {
+ img {
     float: left;
     margin-right: 20px;
   }
-  span {
+
+ .landing-logo span {
     display:block;
     font-size: x-small;
     font-weight: normal;
   }
-  .landing-logo p {
+
+ .landing-logo p {
     font-weight: bold;
     font-size: 19px;
   }
-  .header-wrap {
+ .header-wrap {
     margin: 21px 192px;
     height: 600px;
   }
-  .header_heading {
+ .header_heading {
     color: $headerColor;
     font-size: 69px;
     font-weight: bold;
@@ -59,7 +61,7 @@ header {
       z-index: -1;
     }
   }
-  .header_text {
+ .header_text {
     white-space: pre-line;
     line-height: 28px;
     margin-bottom: 68px;
@@ -117,12 +119,13 @@ button {
 }
 
 .section_card {
-  background-color: $sectionbgcolor;
+  background-color: $sectionBgColor;
   width: 1116px;
   margin: 26px 0;
   border-radius: 8px;
   align-items: center;
   display: flex;
+
   img {
     float: left;
     border-radius: 8px;
@@ -130,6 +133,7 @@ button {
     width: 80%;
     filter: contrast(1.2);
   }
+
   .section_card_text {
     margin: 5% auto;
     color: $textSectionColor;
@@ -138,7 +142,7 @@ button {
   }
   .section_card_right_container {
     width: 80%;
-    margin: 0 90px;
+    margin: 0 9%;
     text-align: center;
   }
   a {
@@ -146,5 +150,93 @@ button {
   }
 }
 
+.section_banner {
+  background: linear-gradient(to right, #649412, #2c5adc);
+  border-radius: 8px;
+  width: 1198px;
+  height: 143px;
+  margin: 141px -39px -71px;
+  position: relative;
+  z-index: 2;
+}
+.section_banner_text_wrap {
+  margin: 10px 162px;
+  display: inline-block;
+}
+.section_banner_heading {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 10px;
 
+  &::after {
+    content: "";
+    position: absolute;
+    left: 283px;
+    top: 13px;
+    width: 62px;
+    height: 54px;
+    background-color: $highlightedWordsColor;
+    z-index: -1;
+  }
+}
 
+.section_banner_text {
+  color: $textSectionColor;
+}
+.section_banner_button {
+  float: right;
+  margin: 48px 160px;
+}
+
+footer {
+  min-width: 1920px;
+  min-height: 243px;
+  background-color: $sectionBgColor;
+  color: #b6c3c4;
+  font-family: 'Hind', sans-serif;
+  display: flex;
+  align-items: flex-end;
+  z-index: 1;
+  position: absolute;
+}
+
+  .footer-wrap {
+    max-width: 1535px;
+    margin: 0 auto;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    height: 166px;
+    align-items: center;
+}
+
+  .footer_logo {
+    display: flex;
+    vertical-align: baseline;
+
+  img {
+    margin-top: 20px;
+    padding-right: 15px;
+    align-self: flex-start;
+  }
+
+  p {
+    font-size: 23px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+
+    span {
+      display: block;
+      font-size: 10px;
+      font-weight: bold;
+      line-height: 10px;
+    }
+  }
+}
+
+.footer_text {
+  width: 307px;
+  font-size: 14px;
+  line-height: 21px;
+}
