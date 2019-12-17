@@ -1,0 +1,88 @@
+body {
+    min-width: 900px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+}
+
+.navigation_panel {
+    display: flex;
+    position: sticky;
+    top: 0;
+    height: 10vh;
+    background-color: #FFFFFF;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.navigation_panel p {
+    color: #777;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    justify-content: flex-start;
+}
+.navigation_panel ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.navigation_panel ul li a{
+    position: relative;
+    padding: 30px 10px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #777;
+    font-size: 1.1em;
+    letter-spacing: 0.07em;
+}
+.navigation_panel ul li a:hover {
+    color: #bfba55;
+}
+
+.hero_section {
+    height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../img/home-bg.jpg) no-repeat top center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero_section h1 {
+    color: #FFFFFF;
+    font-size: 4.5em;
+    margin-bottom: 0;
+}
+.hero_section p {
+    color: #bfba55;
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+}
+.hero_section button {
+    background-color: #ffffff;
+    color: #777;
+    padding: 15px 17px;
+    border: none;
+    border-radius: 25px 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-size: 0.7em;
+    font-weight: bold;
+    margin-top: 3em;
+}
+.section_heading {
+    color: #000;
+}
+.section_img {
+
+}
+footer {
+    color: #777;
+    background-color: #000;
+}
+.footer_heading {
+    color: #ffffff;
+}
