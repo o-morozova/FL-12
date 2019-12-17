@@ -7,7 +7,8 @@ body {
 
 .navigation_panel {
     display: flex;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     height: 10vh;
     background-color: #FFFFFF;
@@ -73,13 +74,71 @@ body {
     font-weight: bold;
     margin-top: 3em;
 }
-.section_heading {
-    color: #000;
-}
-.section_img {
 
+.articles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 19%;
+    margin-top: 2%;
+    margin-bottom: 5%;
 }
+.article {
+    padding-top: 2%;
+    margin-top: 5%;
+}
+.article_heading {
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-bottom: 1%;
+}
+.article_image {
+    margin-bottom: 2%;
+    width: 100%;
+}
+.article_details {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.9em;
+}
+.author_portrait {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-bottom: 20px;
+}
+.posting_date, .comments{
+    margin-left: 2%;
+}
+.article_content{
+    width: 100%;
+    color: #777;
+    font-size: 0.85em;
+    line-height: 2.1;
+}
+.article_button{
+    background-color: #FFFFFF;
+    color: #777;
+    padding: 1.5em 1.4em;
+    border: 1px #777 solid;
+    border-radius: 25px 25px;
+    letter-spacing: 0.07em;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top: 3em;
+    margin-bottom: 5%;
+}
+
+hr {
+    color: #777;
+}
+
 footer {
+    display: flex;
+    flex-direction: row;
     color: #777;
     background-color: #000;
 }
