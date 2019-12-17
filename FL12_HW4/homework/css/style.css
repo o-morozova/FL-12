@@ -131,17 +131,33 @@ body {
     margin-top: 3em;
     margin-bottom: 5%;
 }
-
-hr {
-    color: #777;
+.articles .article:not(:last-child) {
+    margin-bottom: 70px;
+    border-bottom: 1px solid #777;
 }
-
 footer {
     display: flex;
     flex-direction: row;
     color: #777;
     background-color: #000;
+    justify-content: space-between;
+    text-align: left;
+    padding: 4% 19%;
 }
 .footer_heading {
     color: #ffffff;
+    font-weight: bold;
+    font-size: 1.7em;
+    margin-bottom: 1px;
+}
+.credentials, .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 40%;
+    font-size: 0.85em;
+    letter-spacing: 0.07em;
+}
+.footer_text {
+    line-height: 1.7;
 }
