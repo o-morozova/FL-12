@@ -42,6 +42,8 @@ a {
 }
 p {
     opacity: 0.8;
+    font-weight: lighter;
+    font-size: xx-small;
 }
 .wrapper {
     display: grid;
@@ -98,10 +100,7 @@ section {
 .post-0 {
     padding: 108px 190px 30px 15px;
 }
-.post-0 p, .article p, aside p{
-    font-weight: lighter;
-    font-size: xx-small;
-}
+
 .post-0 h2, .article h2 {
     font-weight: lighter;
     font-size: x-large;
@@ -124,23 +123,29 @@ article:nth-child(odd) > div {
     text-align: left;
 }
 .article_image {
-    width: 50%;
+    width: 49.7%;
+}
+.article_text {
+    padding: 10px 10px 10px 10px;
 }
 .article_image:hover {
     opacity: 0.8;
 }
-.article:hover h2 {
+.article_text:hover h2 {
     opacity: 0.8;
 }
 aside {
     grid-area: sidebar;
-    background: #ffffff;
     color: #0b192f;
 }
 aside h3 {
     font-weight: lighter;
     font-size: large;
     margin: 0;
+}
+.news_text {
+    background: #ffffff;
+    margin-top: -4px;
 }
 .news_image {
     width: 100%;
