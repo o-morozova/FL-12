@@ -103,7 +103,7 @@ section {
 
 .post-0 h2, .article h2 {
     font-weight: lighter;
-    font-size: x-large;
+    font-size: 26px;
     margin: 0;
 }
 main {
@@ -122,17 +122,40 @@ article:nth-child(odd) > div {
     flex-direction: row;
     text-align: left;
 }
+article:nth-child(5) > div > div > p {
+    padding-right: 50px;
+}
 .article_image {
     width: 49.7%;
 }
 .article_text {
-    padding: 10px 10px 10px 10px;
+    padding: 10px 15px 10px 20px;
 }
 .article_image:hover {
     opacity: 0.8;
 }
 .article_text:hover h2 {
     opacity: 0.8;
+}
+.day {
+    width: 40px;
+    position: absolute;
+    opacity: 0.15;
+    font-size: x-large;
+    font-weight: lighter;
+    top: 5px;
+    right: 10px;
+    text-align: center;
+}
+.month {
+    font-size: medium;
+    width: 40px;
+}
+article:nth-child(even) .day {
+    left: 5px;
+    top: 10px;
+    display: block;
+    width: 40px;
 }
 aside {
     grid-area: sidebar;
