@@ -93,6 +93,9 @@ header {
 .header__inner ul li a{
     font-size: x-small;
 }
+.header__inner li:hover {
+    background-color: #1f52a4;
+}
 section {
     grid-area: section;
     background: no-repeat url("../img/post0.jpg") center 100% / cover;
@@ -100,7 +103,6 @@ section {
 .post-0 {
     padding: 108px 190px 30px 15px;
 }
-
 .post-0 h2, .article h2 {
     font-weight: lighter;
     font-size: 26px;
@@ -169,6 +171,7 @@ aside h3 {
 .news_text {
     background: #ffffff;
     margin-top: -4px;
+    padding: 18px;
 }
 .news_image {
     width: 100%;
@@ -176,6 +179,10 @@ aside h3 {
 footer {
     grid-area: footer;
     background: #024161;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 15px 15px;
 }
 .sandwich_button {
     display: none;
@@ -195,11 +202,87 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    h1 > span {
+    .menu {
+        display: none;
+    }
+    .logo {
+        margin-bottom: 35px;
+    }
+    .sandwich_button {
+        display: block;
+        margin: 25px 0 55px 0;
+    }
+    .header__inner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header__inner h1 > span {
         color: #9d27b0;
+    }
+    .article {
+        display: block;
+    }
+    .article_image {
+        width: 100%;
+    }
+    p {
+        width: 80%;
+        padding-left: 25px;
+        text-align: left;
+        font-size: 0.9em;
+    }
+    .post-0 h2, .article h2 {
+        font-weight: lighter;
+        font-size: 3.3em;
+        margin: 0;
+        line-height: 95%;
+        text-align: left;
+        padding-left: 25px;
+    }
+    article:nth-child(5) > div > div > p {
+        padding: 30px 50px 30px 50px;
+    }
+    .day {
+        top: 600px;
+        right: 30px;
+        font-size: 2.5em;
+    }
+    article:nth-child(even) .day {
+        top: 575px;
+        left: 710px;
+    }
+    .footer {
+        display: block;
+        text-align: center;
+        font-size: 20px;
     }
 }
 
 @media screen and (max-width: 480px) {
+    .wrapper {
+        grid-template-rows: auto auto 1fr auto auto;
+        grid-template-columns: auto;
+        grid-template-areas:
+                "nav"
+                "section"
+                "main"
+                "sidebar"
+                "footer";
+        grid-column-gap: 5px;
+        grid-row-gap: 20px;
+    }
+    ul {
+        flex-direction: row;
+    }
+    .news_text {
+        width: 650px;
+    }
 
+    .news_text h3 {
+        font-size: 3em;
+    }
+
+    .news_text p {
+        font-size: 1.5em;
+    }
 }
