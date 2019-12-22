@@ -98,7 +98,7 @@ section {
 .post-0 {
     padding: 108px 190px 30px 15px;
 }
-.post-0 p, .article p{
+.post-0 p, .article p, aside p{
     font-weight: lighter;
     font-size: xx-small;
 }
@@ -115,12 +115,16 @@ main {
     align-items: center;
     position: relative;
 }
-.article:nth-child(even) {
+article:nth-child(even) > div {
     flex-direction: row-reverse;
     text-align: right;
 }
+article:nth-child(odd) > div {
+    flex-direction: row;
+    text-align: left;
+}
 .article_image {
-    width: 49%;
+    width: 50%;
 }
 .article_image:hover {
     opacity: 0.8;
@@ -131,6 +135,12 @@ main {
 aside {
     grid-area: sidebar;
     background: #ffffff;
+    color: #0b192f;
+}
+aside h3 {
+    font-weight: lighter;
+    font-size: large;
+    margin: 0;
 }
 .news_image {
     width: 100%;
