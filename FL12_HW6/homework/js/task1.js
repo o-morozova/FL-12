@@ -2,7 +2,7 @@
 let a = Number(prompt('Enter value for a', ''));
 let b = Number(prompt('Enter value for b', ''));
 let c = Number(prompt('Enter value for c', ''));
-if (a===0){
+if (a===0 || isNaN(a) || isNaN(b) || isNaN(c)) {
     alert('Invalid input data');
 } else{
     let D = b * b - 4 * a * c;
