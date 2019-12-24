@@ -8,7 +8,7 @@ if (a===0 || isNaN(a) || isNaN(b) || isNaN(c)) {
     let D = b * b - 4 * a * c;
     if(D < 0) {
         console.log('no solution');
-    } else if (D === 0) {
+    } else if (D===0) {
         let x = - (b / (2 * a));
         console.log('x=' + Math.round(x));
     } else {

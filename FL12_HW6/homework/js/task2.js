@@ -11,7 +11,7 @@ if (isNaN(a) || isNaN(b) || isNaN(c)) {
 } else {
     if (a===b && b===c && c===a) {
         console.log('Equilateral triangle');
-    } else if (a === b || b ===c || c===a) {
+    } else if (a===b || b===c || c===a) {
         console.log('Isosceles triangle');
     } else {
         console.log('Scalene triangle');
