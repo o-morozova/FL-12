@@ -11,14 +11,14 @@ if (userEmail === '' || userEmail === null) {
     alert('Canceled');
 } else if (userEmail.length < MINEMAILLENGTH) {
     alert('I don\'t know any emails having name length less than 5 symbols.');
-} else if (userEmail !== USERMAIL || userEmail !== ADMINMAIL) {
+} else if (userEmail !== USERMAIL && userEmail !== ADMINMAIL) {
     alert('I don\'t know you');
 } else {
     let password = prompt('Please enter your password', '');
     if (password === '' || password === null) {
         alert('Canceled');
-    } else if (!(userEmail === USERMAIL && password === userPass)
-        || !(userEmail === ADMINMAIL && password === adminPass)) {
+    } else if (userEmail === USERMAIL && password !== userPass
+        || userEmail === ADMINMAIL && password !== adminPass) {
         alert('Wrong password');
     } else {
         if (!confirm('Do you want to change your password?')) {
@@ -28,12 +28,14 @@ if (userEmail === '' || userEmail === null) {
             let newPass, newPassConf;
             if (tempPass === '' || tempPass === null) {
                 alert('Canceled');
+            } else if (tempPass !== userPass && tempPass !== adminPass) {
+                alert('Wrong password');
             } else if (userEmail === USERMAIL && tempPass === userPass) {
                 newPass = prompt('Please enter a new password', '');
                 if (newPass === '' || newPass === null) {
                     alert('Canceled');
                 } else if (newPass.length < MINPASSLENGHT) {
-                        alert('It\'s too short password. Sorry.');
+                    alert('It\'s too short password. Sorry.');
                 } else {
                     newPassConf = prompt('Please enter the new password again', '');
                     if (newPassConf !== newPass) {
@@ -43,7 +45,7 @@ if (userEmail === '' || userEmail === null) {
                         alert('You have successfully changed your password');
                     }
                 }
-            } else if (adminEmail === ADMINMAIL && tempPass === adminPass) {
+            } else if (userEmail === ADMINMAIL && tempPass === adminPass) {
                 newPass = prompt('Please enter a new password', '');
                 if (newPass === '' || newPass === null) {
                     alert('Canceled');
@@ -59,5 +61,6 @@ if (userEmail === '' || userEmail === null) {
                     }
                 }
             }
+        }
     }
 }
