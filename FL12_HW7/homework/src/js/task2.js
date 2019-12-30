@@ -1,7 +1,7 @@
 'use strict';
 const MIN_POCKET = 0;
 const MAX_ATTEMPTS = 3;
-const MAX_POCKET_DEFAULT = 8;
+const MAX_POCKET_DEFAULT = 2;
 const PRIZE_DEFAULT = 100;
 const EARNED_PRIZE_DEFAULT = 0;
 const PRIZE_FACTOR = 0.5;
@@ -28,9 +28,9 @@ do {
                     break;
             }
             let userChoice = parseInt(prompt(`Choose a roulette pocket number from ${MIN_POCKET} to ${maxPocket}
-                                                        Attempts left: ${MAX_ATTEMPTS-attempts}
-                                                        Total prize: ${earnedPrize}$ 
-                                                        Possible prize on current attempt: ${possPrize}$`, ''));
+Attempts left: ${MAX_ATTEMPTS-attempts}
+Total prize: ${earnedPrize}$ 
+Possible prize on current attempt: ${possPrize}$`, ''));
             if (isNaN(userChoice)) {
                 alert('Invalid choice');
             } else if (userChoice === randomNumber) {
@@ -55,8 +55,12 @@ do {
                 continue;
             }
         }
-
+        alert(`Thank you for your participation. Your prize is: ${earnedPrize}$`);
+        if (!confirm('Do you want to play again?')) {
+            gameFinished = true;
+        }
     } else {
         alert('You did not become a billionaire, but can.');
+        gameFinished = true;
     }
 } while (!gameFinished);
