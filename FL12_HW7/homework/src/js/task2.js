@@ -1,6 +1,7 @@
 'use strict';
 const MIN_POCKET = 0;
 const MAX_ATTEMPTS = 3;
+const ATTEMPTS_LEFT_TO_FAIL = 2;
 const MAX_POCKET_DEFAULT = 8;
 const PRIZE_DEFAULT = 100;
 const EARNED_PRIZE_DEFAULT = 0;
@@ -52,7 +53,18 @@ Possible prize on current attempt: ${possPrize}$`, ''));
                     }
                 }
             } else {
-                continue;
+                if (attempts === ATTEMPTS_LEFT_TO_FAIL) {
+                    alert(`Thank you for your participation. Your prize is: ${earnedPrize}$`);
+                    if (confirm('Do you want to play again?')) {
+                        maxPocket = MAX_POCKET_DEFAULT;
+                        prize = PRIZE_DEFAULT;
+                        earnedPrize = EARNED_PRIZE_DEFAULT;
+                        break;
+                    } else {
+                        gameFinished = true;
+                        break;
+                    }
+                }
             }
         }
     } else {
