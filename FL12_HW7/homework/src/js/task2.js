@@ -1,7 +1,7 @@
 'use strict';
 const MIN_POCKET = 0;
 const MAX_ATTEMPTS = 3;
-const MAX_POCKET_DEFAULT = 8;
+const MAX_POCKET_DEFAULT = 2;
 const PRIZE_DEFAULT = 100;
 const EARNED_PRIZE_DEFAULT = 0;
 const PRIZE_FACTOR = 0.5;
