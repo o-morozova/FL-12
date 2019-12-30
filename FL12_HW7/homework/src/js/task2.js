@@ -54,12 +54,6 @@ Possible prize on current attempt: ${possPrize}$`, ''));
             } else {
                 continue;
             }
-            if (MAX_ATTEMPTS - attempts === 0) {
-                    alert(`Thank you for your participation. Your prize is: ${earnedPrize}$`);
-                if (!confirm('Do you want to play again?')) {
-                    gameFinished = true;
-                }
-            }
         }
     } else {
         alert('You did not become a billionaire, but can.');
