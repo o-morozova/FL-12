@@ -9,6 +9,6 @@ function getMin() {
             min = arguments[argumentsIndex];
         }
     }
-    return min;
+    console.log(min);
 }
-console.log(getMin(3,0,-3));
+getMin(3,0,-3);
