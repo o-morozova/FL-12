@@ -19,3 +19,23 @@ function executeforEach() {
 executeforEach([1,2,3], function(el) {
     console.log(el * 2)
 });
+
+let resultingArray = [];
+function mapArray() {
+    let arrayToTransform = arguments[0];
+    let numericArray = [];
+    let passedFunction = arguments[1];
+    for (let i = 0; i < arrayToTransform.length; i++) {
+        if (typeof arrayToTransform[i] === 'string') {
+            numericArray.push(parseInt(arrayToTransform[i]));
+        } else {
+            numericArray.push(parseInt(arrayToTransform[i]));
+        }
+    }
+    executeforEach(numericArray, passedFunction);
+    return resultingArray;
+}
+mapArray([2, '5', 8], function(el) {
+    resultingArray.push(el + 3);
+    return el + 3
+});
