@@ -52,5 +52,13 @@ filterArray([2, 5, 8], function(el) {
     return el % 2 === 0
 });
 
+function flipOver(str) {
+    let reversedString = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversedString = reversedString + str[i];
+    }
+    return reversedString;
+}
+flipOver('hey world');
 
 
