@@ -62,10 +62,12 @@ function flipOver(str) {
 flipOver('hey world');
 
 function makeListFromRange(initialArray) {
-    let expandedArray = [];
-    for(let i = initialArray[0]; i <= initialArray[1]; i++) {
-        expandedArray.push(i);
+    let expandedArray = [initialArray[0]];
+    for(let i = initialArray[0]; i < initialArray[1]; i++) {
+        let increasedNumber = expandedArray[expandedArray.length - 1] + 1;
+        expandedArray.push(increasedNumber);
     }
+    console.log(expandedArray);
     return expandedArray;
 }
 makeListFromRange([2, 7]);
