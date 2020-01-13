@@ -61,4 +61,12 @@ function flipOver(str) {
 }
 flipOver('hey world');
 
+function makeListFromRange(initialArray) {
+    let expandedArray = [];
+    for(let i = initialArray[0]; i <= initialArray[1]; i++) {
+        expandedArray.push(i);
+    }
+    return expandedArray;
+}
+makeListFromRange([2, 7]);
 
