@@ -67,8 +67,21 @@ function makeListFromRange(initialArray) {
         let increasedNumber = expandedArray[expandedArray.length - 1] + 1;
         expandedArray.push(increasedNumber);
     }
-    console.log(expandedArray);
     return expandedArray;
 }
 makeListFromRange([2, 7]);
 
+function getArrayOfKeys(arrayOfObjects, key) {
+    let arrayOfKeys = [];
+    executeforEach(arrayOfObjects, function (el) {
+        arrayOfKeys.push(el[key])
+    });
+    return arrayOfKeys;
+}
+
+const actors = [
+    { name: 'tommy', age: 36 },
+    { name: 'lee', age: 28 }
+];
+
+getArrayOfKeys(actors, 'name');
