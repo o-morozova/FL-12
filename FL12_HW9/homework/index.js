@@ -7,6 +7,7 @@ function convert() {
         }
     return conversionResults;
 }
+
 console.log(convert('1', 2, 3, '4'));
 
 function executeforEach() {
@@ -16,6 +17,7 @@ function executeforEach() {
         functionForElements(arrayToProcess[el]);
     }
 }
+
 executeforEach([1,2,3], function(el) {
     console.log(el * 2)
 });
@@ -31,6 +33,7 @@ function mapArray() {
     executeforEach(numericArray, passedFunction);
     return transformedArray;
 }
+
 mapArray([2, '5', 8], function(el) {
     transformedArray.push(el + 3);
     return el + 3
@@ -48,6 +51,7 @@ function filterArray(arrayToFilter, passedFunction) {
     }
     return filteredArray;
 }
+
 filterArray([2, 5, 8], function(el) {
     return el % 2 === 0
 });
@@ -59,6 +63,7 @@ function flipOver(str) {
     }
     return reversedString;
 }
+
 flipOver('hey world');
 
 function makeListFromRange(initialArray) {
@@ -69,6 +74,7 @@ function makeListFromRange(initialArray) {
     }
     return expandedArray;
 }
+
 makeListFromRange([2, 7]);
 
 function getArrayOfKeys(arrayOfObjects, key) {
@@ -85,3 +91,20 @@ const actors = [
 ];
 
 getArrayOfKeys(actors, 'name');
+
+function substitute(arrayOfNumbers) {
+    const minValue = 30;
+    let newArray = [];
+    mapArray(arrayOfNumbers, el => {
+        let newEl = el;
+        el < minValue ? newEl = '*' : el;
+        newArray.push(newEl);
+    });
+    return newArray;
+}
+
+substitute([58, 14, 48, 2, 31, 29]);
+
+
+
+
