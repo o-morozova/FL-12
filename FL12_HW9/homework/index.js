@@ -20,22 +20,37 @@ executeforEach([1,2,3], function(el) {
     console.log(el * 2)
 });
 
-let resultingArray = [];
+let transformedArray = [];
 function mapArray() {
     let arrayToTransform = arguments[0];
     let numericArray = [];
     let passedFunction = arguments[1];
     for (let i = 0; i < arrayToTransform.length; i++) {
-        if (typeof arrayToTransform[i] === 'string') {
-            numericArray.push(parseInt(arrayToTransform[i]));
-        } else {
-            numericArray.push(parseInt(arrayToTransform[i]));
-        }
+        numericArray.push(parseInt(arrayToTransform[i]));
     }
     executeforEach(numericArray, passedFunction);
-    return resultingArray;
+    return transformedArray;
 }
 mapArray([2, '5', 8], function(el) {
-    resultingArray.push(el + 3);
+    transformedArray.push(el + 3);
     return el + 3
 });
+
+function filterArray(arrayToFilter, passedFunction) {
+    let a = [], filteredArray = [];
+    executeforEach(arrayToFilter, function(el) {
+        a.push(passedFunction(el));
+    });
+    for (let i = 0; i < a.length; i++) {
+        if (a[i]) {
+            filteredArray.push(arrayToFilter[i]);
+        }
+    }
+    return filteredArray;
+}
+filterArray([2, 5, 8], function(el) {
+    return el % 2 === 0
+});
+
+
+
