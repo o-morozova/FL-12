@@ -112,8 +112,21 @@ function getPastDay(date, daysAgo) {
 }
 
 const date = new Date(2019, 0, 2);
-getPastDay(date, 1); // 1, (1 Jan 2019)
-getPastDay(date, 2); // 31, (31 Dec 2018)
-getPastDay(date, 365); // 2, (2 Jan 2018)
+getPastDay(date, 1);
+getPastDay(date, 2);
+getPastDay(date, 365);
+
+function formatDate(date) {
+    let dayOfMonth = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+    let hour = date.getHours();
+    let minutes = date.getMinutes();
+    return `${year}/${month}/${dayOfMonth} ${hour}:${minutes}`;
+}
+
+formatDate(new Date('6/15/2018 09:15:00'));
+formatDate(new Date());
+
 
 
