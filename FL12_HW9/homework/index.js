@@ -8,7 +8,7 @@ function convert() {
     return conversionResults;
 }
 
-console.log(convert('1', 2, 3, '4'));
+convert('1', 2, 3, '4');
 
 function executeforEach() {
     let arrayToProcess = arguments[0];
