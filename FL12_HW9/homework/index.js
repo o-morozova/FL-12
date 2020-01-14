@@ -40,12 +40,12 @@ mapArray([2, '5', 8], function(el) {
 });
 
 function filterArray(arrayToFilter, passedFunction) {
-    let a = [], filteredArray = [];
+    let arrayForPassedFunctionResults = [], filteredArray = [];
     executeforEach(arrayToFilter, function(el) {
-        a.push(passedFunction(el));
+        arrayForPassedFunctionResults.push(passedFunction(el));
     });
-    for (let i = 0; i < a.length; i++) {
-        if (a[i]) {
+    for (let i = 0; i < arrayForPassedFunctionResults.length; i++) {
+        if (arrayForPassedFunctionResults[i]) {
             filteredArray.push(arrayToFilter[i]);
         }
     }
@@ -105,6 +105,15 @@ function substitute(arrayOfNumbers) {
 
 substitute([58, 14, 48, 2, 31, 29]);
 
+function getPastDay(date, daysAgo) {
+    let numberOfDayInMonth = new Date(date);
+    numberOfDayInMonth.setDate(date.getDate() - daysAgo);
+    return numberOfDayInMonth.getDate();
+}
 
+const date = new Date(2019, 0, 2);
+getPastDay(date, 1); // 1, (1 Jan 2019)
+getPastDay(date, 2); // 31, (31 Dec 2018)
+getPastDay(date, 365); // 2, (2 Jan 2018)
 
 
