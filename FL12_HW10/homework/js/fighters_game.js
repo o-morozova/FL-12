@@ -1,12 +1,5 @@
+const maxProbability = 100;
 class Fighter {
-    _name;
-    _damage;
-    _totalHp;
-    _currentHp;
-    _strength;
-    _agility;
-    _wins;
-    _losses;
     constructor(){
         this._name = arguments[0].name;
         this._damage = arguments[0].damage;
@@ -33,11 +26,11 @@ class Fighter {
         return this._currentHp;
     }
     attack(defender) {
-        if (!defender instanceof Fighter) {
-            console.log("Error. This function requires an object of the Fighter class");
+        if (!(defender instanceof Fighter)) {
+            console.log('Error. This function requires an object of the Fighter class');
         } else {
-            let probabilityOfSuccessfulAttack = 100 - (defender.getStrength() + defender.getAgility());
-            let randomNumber = Math.round(Math.random() * 100);
+            let probabilityOfSuccessfulAttack = maxProbability - (defender.getStrength() + defender.getAgility());
+            let randomNumber = Math.round(Math.random() * maxProbability);
             if (randomNumber < probabilityOfSuccessfulAttack) {
                 defender.dealDamage(this._damage);
                 console.log(this._name + ' makes ' + this._damage + ' damage to ' + defender.getName());
@@ -70,23 +63,20 @@ class Fighter {
 }
 
 function battle(myFighterObject, myFighterObject2) {
-    if ((!myFighterObject instanceof Fighter) || (!myFighterObject2 instanceof Fighter)){
-        console.log("Error. This function requires 2 objects of the Fighter class");
+    if (!(myFighterObject instanceof Fighter) || !(myFighterObject2 instanceof Fighter)){
+        console.log('Error. This function requires 2 objects of the Fighter class');
     } else if (myFighterObject.getHealth() === 0) {
         console.log(`${myFighterObject.getName()} is dead and can't fight`);
     } else if (myFighterObject2.getHealth() === 0) {
         console.log(`${myFighterObject2.getName()} is dead and can't fight`);
     } else {
-        while (true) {
+        do{
             myFighterObject.attack(myFighterObject2);
             if (myFighterObject2.getHealth() === 0) {
                 break;
             }
             myFighterObject2.attack(myFighterObject);
-            if (myFighterObject.getHealth() === 0) {
-                break;
-            }
-        }
+        } while (myFighterObject.getHealth() > 0);
         if (myFighterObject.getHealth() === 0) {
             console.log(`${myFighterObject2.getName()} has won!`);
             myFighterObject2.addWin();
@@ -101,4 +91,4 @@ function battle(myFighterObject, myFighterObject2) {
 
 const myFighterObject = new Fighter({name: 'Maximus', damage: 25, hp: 100, strength: 30, agility: 25});
 const myFighterObject2 = new Fighter({name: 'Commodus', damage: 21, hp: 95, strength: 40, agility: 35});
-console.log(myFighterObject._name);
+
